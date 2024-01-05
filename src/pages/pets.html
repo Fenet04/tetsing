@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../output.css" rel="stylesheet">
+    <title>Pet Listings - Pet Adoption Admin</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <!-- Sidebar -->
+    <div class="flex h-screen bg-almond text-Taude">
+        <div class="hidden lg:flex flex-col w-64 bg-coffee">
+            <nav class="bg-Taupe p-4 text-white">
+                <div class="container mx-auto flex justify-between items-center">
+                    <h1 class="text-2xl font-semibold">Pet Adoption</h1>
+                    <a href="#" class="lg:hidden hover:text-cream">Logout</a>
+                </div>
+            </nav>
+            <div class="p-4">
+                <h1 class="text-2xl font-semibold"></h1>
+            </div>
+            <ul class="flex-1">
+                <li class="p-4 hover:bg-cream">
+                    <a href="../index.html" class="block">Dashboard</a>
+                </li>
+                <li class="p-4 hover:bg-cream">
+                    <a href="pets.html" class="block Active">Pet Listings</a>
+                </li>
+                <li class="p-4 hover:bg-cream">
+                    <a href="users.html" class="block">Users (Admin)</a>
+                </li>
+                <li class="p-4 hover:bg-cream Active">
+                    <a href="request.html" class="block">Adoption Requests</a>
+                </li>
+            </ul>
+            <a href="#" class="hidden lg:inline-block hover:text-cream ">Logout</a>
+        </div>
+
+        <!-- Content -->
+        <div class="w-4/5 p-8">
+            <h2 class="text-2xl font-semibold mb-4">Pet Listings</h2>
+
+            <!-- Pets Table -->
+            <div class="bg-white p-4 rounded shadow-md">
+                <!-- Updated Pets Table -->
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th class="p-2">ID</th>
+                            <th class="p-2">Name</th>
+                            <th class="p-2">Type</th>
+                            <th class="p-2">Breed</th>
+                            <th class="p-2">Age</th>
+                            <th class="p-2">Status</th>
+                            <th class="p-2">Actions</th>
+                            <!-- Add more columns as needed -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Assume pets are dynamically added -->
+                        <!-- Add pet data dynamically -->
+                        <tr>
+                            <td class="p-2">1</td>
+                            <td class="p-2">Buddy</td>
+                            <td class="p-2">Dog</td>
+                            <td class="p-2">Labrador</td>
+                            <td class="p-2">3 years</td>
+                            <td class="p-2">Available</td>
+                            <td class="p-2">
+                                <button class="bg-cream text-white px-2 py-1 rounded hover:bg-mocha">Edit</button>
+                                <button class="bg-delete text-white px-2 py-1 rounded hover:bg-deletehover">Delete</button>
+                            </td>
+                            <!-- Add more rows as needed -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Toggle Button for Small Screens -->
+    <div class="lg:hidden fixed top-0 left-0">
+        <button id="toggle-sidebar" class="bg-Taupe text-white p-2 rounded">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejun="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        const toggleSidebar = document.getElementById('toggle-sidebar');
+        const sidebar = document.querySelector('.lg\\:flex');
+
+        toggleSidebar.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
